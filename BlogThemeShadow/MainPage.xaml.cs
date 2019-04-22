@@ -25,8 +25,6 @@ namespace BlogThemeShadow
             this.InitializeComponent();
         }
 
-
-
         private void DepthSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             float SliderValue = (float)e.NewValue;
