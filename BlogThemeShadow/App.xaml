@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="BlogThemeShadow.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlogThemeShadow">
+    <Application.Resources>
+
+            <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="White" />
+            <SolidColorBrush Color="#99FFFFFF" x:Key="RatingControlUnselectedForeground" />
+    </Application.Resources>
+
+</Application>
