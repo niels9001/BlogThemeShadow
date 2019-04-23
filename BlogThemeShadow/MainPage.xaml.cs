@@ -41,21 +41,20 @@ namespace BlogThemeShadow
             HeroImageShadow.Receivers.Add(BackgroundGrid);
             HeroImageShadow.Receivers.Add(LoungeGrid);
             HeroImageShadow.Receivers.Add(BedroomGrid);
-
-
-
         }
 
         private void TextBox_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             if (UserIDBox.Text.Count() > 0)
             {
-                SelectButton.IsEnabled = true;
+                UserIDBox.Translation = new Vector3(0, 0, 0);
+            //    SelectButton.IsEnabled = true;
                 SelectButton.Translation = new Vector3(0, 0, 32);
             }
             else
             {
-                SelectButton.IsEnabled = false;
+                UserIDBox.Translation = new Vector3(0, 0, 32);
+             ///   SelectButton.IsEnabled = false;
                 SelectButton.Translation = new Vector3(0, 0, 0);
             }
         }

@@ -54,7 +54,7 @@
                 <TextBlock Text="Lounge" FontWeight="Bold" Foreground="White" FontSize="24" VerticalAlignment="Bottom" Margin="0,0,24,44" TextAlignment="Right"/>
                 <RatingControl MaxRating="5" Value="2" Margin="0,0,24,12" FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="White" />
             </Grid>
-            <Grid x:Name="PoolGrid" Background="White" Grid.Column="1" Width="320" Height="156" Shadow="{StaticResource BackgroundGridShadow}" Translation="0, 0, 32">
+            <Grid x:Name="PoolGrid" Background="White" Grid.Column="1" Margin="-48,0,0,0" Width="320" Height="156" Shadow="{StaticResource HeroImageShadow}" Translation="0, 0, 32">
                 <Grid.Transitions>
                     <TransitionCollection>
                         <ContentThemeTransition VerticalOffset="150" />
@@ -64,9 +64,17 @@
                 <TextBlock Text="Pool" FontWeight="Bold" Foreground="White" FontSize="28" VerticalAlignment="Bottom" Margin="24,0,0,44"/>
                 <RatingControl MaxRating="5" Value="4" Margin="24,0,0,12" FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="White" />
             </Grid>
-            
-            <TextBox x:Name="UserIDBox" HorizontalAlignment="Center" TextChanging="TextBox_TextChanging" Grid.Column="1" Margin="-48,360,0,0" VerticalAlignment="Center" Translation="0,0,0" Width="320" Shadow="{StaticResource BackgroundGridShadow}" PlaceholderText="Enter User ID"/>
-            <Button x:Name="SelectButton" IsEnabled="False" MinWidth="320" Shadow="{StaticResource BackgroundGridShadow}" Content="Select this room" Grid.Column="1" HorizontalAlignment="Center" Background="{ThemeResource SystemColorControlAccentColor}" Foreground="White" VerticalAlignment="Center" Margin="-48, 490,0,0" />
+
+            <TextBox x:Name="UserIDBox" HorizontalAlignment="Center" TextChanging="TextBox_TextChanging" Grid.Column="1" Margin="-48,360,0,0" VerticalAlignment="Center" Translation="0,0,0" Width="320" Shadow="{StaticResource BackgroundGridShadow}" PlaceholderText="Enter User ID">
+                <TextBox.TranslationTransition>
+                    <Vector3Transition Duration="0:0:0.8"/>
+                </TextBox.TranslationTransition>
+            </TextBox>
+            <Button x:Name="SelectButton" MinWidth="320" Shadow="{StaticResource BackgroundGridShadow}" Content="Select this room" Grid.Column="1" HorizontalAlignment="Center" Background="{ThemeResource SystemColorControlAccentColor}" Foreground="White" VerticalAlignment="Center" Margin="-48, 490,0,0">
+                <Button.TranslationTransition>
+                    <Vector3Transition Duration="0:0:0.8"/>
+                </Button.TranslationTransition>
+            </Button>
 
         </Grid>
     </Grid>
